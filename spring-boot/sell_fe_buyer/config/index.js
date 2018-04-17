@@ -16,9 +16,9 @@ module.exports = {
 		productionGzip: false,
 		productionGzipExtensions: ['js', 'css'],
 		port: 9000,
-        	sellUrl: 'http://sell.com',
-        	openidUrl: 'http://cyh.nat300.top/sell/wechat/authorize',
-        	wechatPayUrl: 'http://cyh.nat300.top/sell/pay/create'
+    sellUrl: 'http://sell.com',
+    openidUrl: 'http://cyh.nat300.top/sell/wechat/authorize',
+    wechatPayUrl: 'http://cyh.nat300.top/sell/pay/create'
 	},
 	dev: {
 		env: require('./dev.env'),
@@ -26,14 +26,22 @@ module.exports = {
 		assetsSubDirectory: 'static',
 		assetsPublicPath: '/',
 		proxyTable: {},
-		// CSS Sourcemaps off by default because relative paths are "buggy"
+    // proxyTable: {
+    //   '/localhost': {
+    //     target: 'http://sell.com',
+    //     pathRewrite: {
+    //       '^/localhost': '/'
+    //     }
+    //   }
+    // },
+    // CSS Sourcemaps off by default because relative paths are "buggy"
 		// with this option, according to the CSS-Loader README
 		// (https://github.com/webpack/css-loader#sourcemaps)
 		// In our experience, they generally work as expected,
 		// just be aware of this issue when enabling this option.
 		cssSourceMap: false,
-		sellUrl: 'http://127.0.0.1',
-		openidUrl: 'http://127.0.0.1',
-		wechatPayUrl: 'http://127.0.0.1'
+    sellUrl: 'http://192.168.0.105:9000/',
+    openidUrl: 'http://cyh.nat300.top/sell/wechat/authorize',
+    wechatPayUrl: 'http://cyh.nat300.top/sell/pay/create'
 	}
 }

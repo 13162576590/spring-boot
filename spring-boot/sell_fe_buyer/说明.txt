@@ -2,10 +2,17 @@
 
 运行方式
 
-需安装node和npm 
+需安装node和npm
 进入文件夹目录
-1  npm install 
+1  npm install
 2  npm run dev
+3  npm run build
 
-浏览器打开  localhost  
+浏览器打开  localhost
 
+
+前端页面访问:
+1.先访问
+http://sell.com/#/order
+2.设置cookie
+document.cookie="openid=abc123"
